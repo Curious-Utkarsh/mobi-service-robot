@@ -88,4 +88,4 @@ The voice node reads its keys from the environment: `export GEMINI_API_KEY=...` 
 Package layout and the `mobi_planning` / `mobi_motion` plugins follow Antonio Brandi's *Self-Driving and ROS 2 — Learn by Doing* course series. House and warehouse worlds use [AWS RoboMaker](https://github.com/aws-robotics/aws-robomaker-small-house-world) models.
 
 ---
-[Kumar Utkarsh](https://github.com/Curious-Utkarsh) · [LinkedIn](https://www.linkedin.com/in/kumar-utkarsh-124aab227/) · [MechaMind Labs](https://www.mechamindlabs.com/)
+[Kumar Utkarsh](https://github.com/Curious-Utkarsh) · [LinkedIn](https://www.linkedin.com/in/kumar-utkarsh-124aab227/) · [MechaMind Labs](https://github.com/MechaMind-Labs)
