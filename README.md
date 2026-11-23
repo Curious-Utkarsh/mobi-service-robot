@@ -74,7 +74,7 @@ The voice node reads its keys from the environment: `export GEMINI_API_KEY=...` 
 ## Engineering notes
 
 - **Encoders the ESP32 could not keep up with.** With an ESP32 at 240 MHz, wheel counts from the high-resolution encoders were unreliable, which corrupted odometry and everything above it. I isolated the encoder layer, confirmed counts were being missed, and moved motor control to a Teensy 4.1 at 600 MHz, which reads them cleanly.
-- **Tight passages.** With a 0.58 × 0.56 m costmap footprint the robot had to pass ~0.8 m openings. On the real robot it stopped mid-path even with obstacles far away; I traced it to costmaps not clearing after dynamic obstacles moved. The current workaround disables obstacle checks in the local controller — a stopgap, not a fix; a behaviour-tree recovery is next.
+- **Tight passages.** With a 0.58 × 0.56 m costmap footprint the robot had to pass ~0.8 m openings. On the real robot it stopped mid-path even with obstacles far away; I traced it to costmaps not clearing after dynamic obstacles moved, and fixed it by enabling ray tracing (clearing) in the obstacle layer and increasing the obstacle sensing distance, which let the costmap clear.
 
 ## Related
 
